@@ -1,8 +1,8 @@
 cabal-version: 2.4
 name: microbase
 homepage: https://github.com/daig/microbase
-version: 4.14.0.0
-category: 
+version: 4.14.0.0.1
+category: Prelude
 synopsis: A minimal base to work around GHC bugs.
 description: This package is a hyper-minimal version of base-noprelude:
              It merely reexports some hardwired modules needed downstream while hiding most things.
@@ -13,7 +13,7 @@ description: This package is a hyper-minimal version of base-noprelude:
 stability: cursed
 bug-reports: https://github.com/daig/microbase/issues
 author: Dai
-maintainer: daig@sodality.cc
+maintainer: dai@sodality.cc
 copyright: 2020 Sodality
 license: MIT
 
@@ -42,4 +42,4 @@ library
                     -- For HasField(..)
                     , GHC.Records
   default-language: Haskell2010
-  build-depends: base == 4.14.0.0
+  build-depends: base ^>= 4.14.0.0
