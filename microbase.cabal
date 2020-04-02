@@ -27,6 +27,7 @@ library
                     , GHC.Base 
                     -- For Show(..)
                     , GHC.Show
+                    , GHC.Read
                     -- For IsList(..)
                     , GHC.Exts
                     , Data.Foldable, Data.Traversable
@@ -41,5 +42,9 @@ library
                     , Control.Arrow
                     -- For HasField(..)
                     , GHC.Records
+                    , GHC.Generics
+                      -- | For Bounded(..) and Enum(..)
+                    , GHC.Enum
+                    , GHC.Ix
   default-language: Haskell2010
   build-depends: base ^>= 4.14.0.0
