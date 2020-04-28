@@ -1,7 +1,7 @@
 cabal-version: 2.4
 name: microbase
 homepage: https://github.com/daig/microbase
-version: 4.14.0.0.4
+version: 4.14.0.0.6
 category: Prelude
 synopsis: A minimal base to work around GHC bugs.
 description: This package is a hyper-minimal version of base-noprelude:
@@ -45,7 +45,12 @@ library
                     , GHC.Generics
                       -- | For Bounded(..) and Enum(..)
                     , GHC.Enum
-                    , GHC.Ix
+                    -- | For Ix(..)
+                    , GHC.Arr
+                    -- | For Num(fromInteger)
+                    , GHC.Num
+                    -- | For Fractional(fromRational) and Rational/Ratio
+                    , GHC.Real
                     , GHC.Err, GHC.Exception, GHC.Exception.Type
   default-language: Haskell2010
   build-depends: base ^>= 4.14.0.0
