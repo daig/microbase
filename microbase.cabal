@@ -51,10 +51,15 @@ library
                     , GHC.Num
                     -- | For Fractional(fromRational) and Rational/Ratio
                     , GHC.Real
+                    -- | For IsString
+                    , Data.String
                     , GHC.Stack.Types, GHC.Exception, GHC.Exception.Type
                     -- | For Int{8,16,32,64} FFI types
                     , GHC.Int
-                    -- | For IsString
-                    , Data.String
+                    -- | For Ptr, FunPtr FFI types
+                    , GHC.Ptr
+                    -- | For StablePtr FFI type
+                    , GHC.Stable
+
   default-language: Haskell2010
   build-depends: base ^>= 4.14.0.0
