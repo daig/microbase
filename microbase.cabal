@@ -38,6 +38,8 @@ library
                     , Data.Data
                     -- For do notation
                     , Control.Applicative, Control.Monad, Control.Monad.Fix
+                    -- For monad comprehensions
+                    , Control.Monad.Zip
                     -- For arrow notation
                     , Control.Arrow
                     -- For HasField(..)
