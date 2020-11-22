@@ -62,6 +62,7 @@ library
                     , GHC.Ptr
                     -- | For StablePtr FFI type
                     , GHC.Stable
+                    , GHC.OverloadedLabels
 
   default-language: Haskell2010
   build-depends: base ^>= 4.14.0.0
