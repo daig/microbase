@@ -1,0 +1,56 @@
+name: microbase
+github: daig/microbase
+version: 4.14.0.0.6
+category: Prelude
+synopsis: A minimal base to work around GHC bugs.
+description: This package is a hyper-minimal version of base-noprelude;
+             It merely reexports some hardwired modules needed downstream while hiding most things.
+             For example, ghcid will not work without @base:System.IO@.
+             It also reexports all the "magic" classes that work with stock deriving.
+             Ideally this package wouldn't be needed because @ghc-prim@ would contain everything hardwired,
+             and base would just be an optional standard library.
+stability: cursed
+author: Dai
+maintainer: dai@sodality.cc
+copyright: 2020 Sodality
+license: MIT
+
+library:
+  dependencies: base >= 4.14.0.0
+  reexported-modules:
+    - System.IO
+    - GHC.Base #For Functor(..)
+    - GHC.Show #For Show(..)
+    - GHC.Read #For Read(..)
+    - GHC.Exts #For IsList(..)
+    - Data.Foldable
+    - Data.Traversable
+    - GHC.TypeLits #For KownNat(..), KnownSymbol(..), and TypeError(..)/ErrorMessage(..)
+    - Type.Reflection # For Typeable(..) and internals
+    - Type.Reflection.Unsafe
+    - Data.Data #For Data(..)
+    #For do notation
+    - Control.Applicative
+    - Control.Monad
+    - Control.Monad.Fix
+    - Control.Monad.Zip #For monad comprehensions
+    - Control.Arrow #For arrow notation
+    - GHC.Records #For HasField(..)
+    - GHC.Generics
+    - GHC.Enum #For Bounded(..) and Enum(..)
+    - GHC.Arr #For Ix(..)
+    - GHC.Num #For Num(fromInteger)
+    - GHC.Real #For Fractional(fromRational) and Rational/Ratio
+    - Data.String #For IsString
+    - GHC.Stack.Types
+    - GHC.Exception
+    - GHC.Exception.Type
+    - GHC.Int #For Int{8,16,32,64} FFI types
+    - GHC.Ptr #For Ptr, FunPtr FFI types
+    - GHC.Stable #For StablePtr FFI type
+    - GHC.OverloadedLabels
+    - Unsafe.Coerce #For UnsafeEquality
+    # For Paths_ module generation
+    - Data.Version
+    - Control.Exception
+    - System.Environment
