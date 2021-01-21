@@ -1,22 +1,24 @@
 name: microbase
 github: daig/microbase
-version: 4.14.0.0.6
+version: 4.15.0.0.1
 category: Prelude
 synopsis: A minimal base to work around GHC bugs.
-description: This package is a hyper-minimal version of base-noprelude;
-             It merely reexports some hardwired modules needed downstream while hiding most things.
-             For example, ghcid will not work without @base:System.IO@.
-             It also reexports all the "magic" classes that work with stock deriving.
-             Ideally this package wouldn't be needed because @ghc-prim@ would contain everything hardwired,
-             and base would just be an optional standard library.
+description: >
+  This package is a hyper-minimal version of base-noprelude.
+  It merely reexports some hardwired modules needed downstream while hiding most things.
+  For example, ghcid will not work without @base:System.IO@.
+  It also reexports all the "magic" classes that work with stock deriving.
+  Ideally this package wouldn't be needed because @ghc-prim@ would contain everything hardwired,
+  and base would be replaceable.
 stability: cursed
 author: Dai
 maintainer: dai@sodality.cc
-copyright: 2020 Sodality
+copyright: 2021 Sodality
 license: MIT
 
+dependencies: base ^>= 4.15.0.0
 library:
-  dependencies: base >= 4.14.0.0
+  other-modules: []
   reexported-modules:
     - System.IO
     - GHC.Base #For Functor(..)
