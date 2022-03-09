@@ -1,6 +1,6 @@
 name: microbase
 github: daig/microbase
-version: 4.15.0.0.1
+version: 4.16.1.0
 category: Prelude
 synopsis: A minimal base to work around GHC bugs.
 description: >
@@ -16,7 +16,7 @@ maintainer: dai@sodality.cc
 copyright: 2021 Sodality
 license: MIT
 
-dependencies: base ^>= 4.15.0.0
+dependencies: base ^>= 4.16.1.0
 library:
   other-modules: []
   reexported-modules:
@@ -48,6 +48,7 @@ library:
     - GHC.Exception
     - GHC.Exception.Type
     - GHC.Int #For Int{8,16,32,64} FFI types
+    - GHC.Word #For Word{8,16,32,64} FFI types
     - GHC.Ptr #For Ptr, FunPtr FFI types
     - GHC.Stable #For StablePtr FFI type
     - GHC.OverloadedLabels
