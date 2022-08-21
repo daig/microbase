@@ -1,6 +1,6 @@
 name: microbase
 github: daig/microbase
-version: 4.16.1.0
+version: 4.17.0.0
 category: Prelude
 synopsis: A minimal base to work around GHC bugs.
 description: >
@@ -13,10 +13,10 @@ description: >
 stability: cursed
 author: Dai
 maintainer: dai@sodality.cc
-copyright: 2021 Sodality
+copyright: 2022 Sodality
 license: MIT
 
-dependencies: base ^>= 4.16.1.0
+dependencies: base ^>= 4.17.0.0
 library:
   other-modules: []
   reexported-modules:
